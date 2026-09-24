@@ -249,7 +249,7 @@ importers:
         specifier: ^2.8.2
         version: 2.9.1
       yargs:
-        specifier: ^18.0.0
+        specifier: ^18.2.0
         version: 18.2.0
     devDependencies:
       '@quartz-community/types':
@@ -262,7 +262,7 @@ importers:
         specifier: ^3.0.4
         version: 3.0.5
       '@types/node':
-        specifier: ^26.5.1
+        specifier: ^26.6.2
         version: 26.6.2
       '@types/pretty-time':
         specifier: ^1.1.5
@@ -280,10 +280,10 @@ importers:
         specifier: ^0.28.2
         version: 0.28.2
       prettier:
-        specifier: ^3.8.1
-        version: 3.9.9
+        specifier: ^3.9.8
+        version: 3.9.8
       tsx:
-        specifier: ^4.21.0
+        specifier: ^4.23.15
         version: 4.23.15
       typescript:
         specifier: ^5.9.3
@@ -2046,8 +2046,8 @@ packages:
       preact-render-to-string:
         optional: true
 
-  prettier@3.9.9:
-    resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
+  prettier@3.9.8:
+    resolution: {integrity: sha512-WRFq3Wn3WId7LLROfMLdH7xaFr2jR62wU8nLO6rQUOLOxNZUviyJQs1M0iIhLexSFy+L+w0ch66wtoO2jRjG0A==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -4299,7 +4299,7 @@ snapshots:
     optionalDependencies:
       preact-render-to-string: 6.7.0(preact@10.29.8)
 
-  prettier@3.9.9: {}
+  prettier@3.9.8: {}
 
   pretty-bytes@7.1.3: {}
 

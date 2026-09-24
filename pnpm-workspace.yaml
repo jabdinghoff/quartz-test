@@ -1,0 +1,4 @@
+allowBuilds:
+  # Both ship their native binaries as optional platform packages; the scripts are fallbacks.
+  "@parcel/watcher@2.6.0": false
+  esbuild@0.28.2: false

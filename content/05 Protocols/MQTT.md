@@ -1,0 +1,1 @@
+**MQTT** (**M**essage **Q**ueueing **T**elemetry **T**ransport) is a lightweight, publish–subscribe, machine-to-machine network protocol for message queueing/message queuing services.

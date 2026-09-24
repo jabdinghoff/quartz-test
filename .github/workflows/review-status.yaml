@@ -1,0 +1,36 @@
+name: Review status
+
+# Reports notes still marked `needs-review: true`. Deliberately separate from the deploy
+# workflow: a red check here never stops the site from publishing.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  needs-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: No published note needs review
+        shell: python
+        run: |
+          import pathlib, re, sys
+
+          pending = []
+          for note in sorted(pathlib.Path("content").rglob("*.md")):
+              if "private" in note.parts:
+                  continue
+              text = note.read_text(encoding="utf-8")
+              front = re.match(r"^---\r?\n(.*?)\r?\n---", text, re.S)
+              if front and re.search(r'^needs-review:\s*["\']?true["\']?\s*$', front.group(1), re.M | re.I):
+                  pending.append(note)
+
+          for note in pending:
+              print(f"::warning file={note}::{note} is marked needs-review")
+          print(f"{len(pending)} note(s) need review")
+          sys.exit(1 if pending else 0)

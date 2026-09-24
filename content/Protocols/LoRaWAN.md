@@ -1,0 +1,1 @@
+The LoRaWAN Module requires a [[MQTT]] connection

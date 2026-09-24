@@ -2,3 +2,10 @@ allowBuilds:
   # Both ship their native binaries as optional platform packages; the scripts are fallbacks.
   "@parcel/watcher@2.6.0": false
   esbuild@0.28.2: false
+
+# pnpm on Windows ARM64 can run as an x64 program and then only installs x64 native packages,
+# which the ARM64 Node can't load. Always install the arm64 variants as well.
+supportedArchitectures:
+  os: [current]
+  cpu: [current, arm64]
+  libc: [current]

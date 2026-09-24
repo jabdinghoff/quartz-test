@@ -7,6 +7,8 @@ tags:
 
 The gateway forwards data from every [[Sensor]] to the cloud.
 
+
+new line here !!
 ## Pairing
 
 1. Hold the button for five seconds.
